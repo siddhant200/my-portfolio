@@ -1,0 +1,81 @@
+/* Navbar Styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  background: rgba(20, 20, 20, 0.95);
+  color: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  height: 60px; /* Consistent height */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Logo Styling */
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+/* Navigation Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  font-size: 18px;
+}
+
+.nav-links li {
+  cursor: pointer;
+  padding: 8px 12px;
+  position: relative;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Hover Effect - Underline Animation */
+.nav-links li::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #00aaff;
+  transition: width 0.3s ease-in-out;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-links li:hover {
+  color: #00aaff;
+}
+
+.nav-links li:hover::after {
+  width: 100%;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding: 10px 20px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    position: absolute;
+    right: 10px;
+    top: 70px;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  .logo {
+    font-size: 18px;
+  }
+}
