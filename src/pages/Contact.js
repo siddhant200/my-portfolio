@@ -21,18 +21,12 @@ function Contact() {
       return;
     }
 
-    
-    const phoneNumber = "9969393199"; 
-
-    
+    const phoneNumber = "919969393199"; // Use country code (91 for India)
     const whatsappMessage = `Hello, my name is ${name}. My email is ${email}. Here is my message: ${message}`;
     const encodedMessage = encodeURIComponent(whatsappMessage);
-
     
-    const whatsappURL = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
-
-    
-    window.open(whatsappURL, "_blank");
+    // Open WhatsApp with the message pre-filled
+    window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, "_blank");
   };
 
   return (
@@ -41,7 +35,6 @@ function Contact() {
         <h2 className="contact-title">Contact Me</h2>
         <p className="contact-description">Let's get in touch! Feel free to reach out.</p>
 
-        {/* Contact Form */}
         <form className="contact-form" onSubmit={handleSubmit}>
           <div className="input-group">
             <input 
