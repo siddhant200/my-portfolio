@@ -21,17 +21,17 @@ function Contact() {
       return;
     }
 
-    // Your WhatsApp Number (Replace with actual number, no + or spaces)
-    const phoneNumber = "9969393199"; // Replace with your WhatsApp number
+    
+    const phoneNumber = "9969393199"; 
 
-    // Encode message for URL safety
+    
     const whatsappMessage = `Hello, my name is ${name}. My email is ${email}. Here is my message: ${message}`;
     const encodedMessage = encodeURIComponent(whatsappMessage);
 
-    // Corrected WhatsApp Web & Mobile URL
+    
     const whatsappURL = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodedMessage}`;
 
-    // Open WhatsApp in a new tab
+    
     window.open(whatsappURL, "_blank");
   };
 
