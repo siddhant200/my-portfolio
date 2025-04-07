@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/Resume.css";
 
-const resumeFileId = "1qmALGWSjTO-tlIExb7YErfISC5ubxz_z"; // Replace with actual File ID
+const resumeFileId = "1yir_cSOm2_z5XxbPQTZNbjj0Wvck2WXK"; // Replace with actual File ID
 
 const resumeViewLink = `https://drive.google.com/file/d/${resumeFileId}/view?usp=sharing`;
 const resumeDownloadLink = `https://drive.google.com/uc?export=download&id=${resumeFileId}`;
